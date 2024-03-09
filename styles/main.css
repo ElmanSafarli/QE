@@ -223,7 +223,11 @@ video.frame-media_left {
     justify-content: center;
 }
 
-.light-mode .introduce-section {
+.introduce-section {
+    text-align: center;
+}
+
+. .light-mode .introduce-section {
     color: #fff;
     font-size: 20px;
     text-align: center;
