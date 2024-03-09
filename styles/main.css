@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Скрываем Scrollbar */
+body {
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+:root {
+    --index: calc(1vw + 1vh);
+    --gutter: 30px;
+    --side-small: 26;
+    --side-big: 36;
+    --depth: 6000px;
+    --transition: .75s cubic-bezier(.075, .5, 0, 1)
+}
+
+/* Скрываем Scrollbar */
+body {
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}
+
+body {
+
+    font-size: calc(var(--index) * .8);
+    line-height: 1.75;
+    height: var(--depth);
+}
+
+
+/* Light mode */
+.light-mode {
+    --background-color: #ffffff;
+    --text-color: #000;
+}
+
+.light-mode body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.dark-mode body {
+    color: #fff;
+    background-color: #000;
+}
+
+
+.change-theme {
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    z-index: 99999;
+    border: none;
+    background: transparent;
+}
+
+.toggle {
+    background: linear-gradient(90deg, #6f43bf 0%, #c653ff 54.6%, #4843ff 100%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.1);
+    line-height: 1;
+}
+
+.input {
+    display: none;
+}
+
+.icon {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    transition: transform 500ms;
+}
+
+.icon--moon {
+    transition-delay: 200ms;
+    color: black;
+}
+
+.icon--sun {
+    transform: scale(0);
+    color: yellow;
+}
+
+#switch:checked+.icon--moon {
+    transform: rotate(360deg) scale(0);
+}
+
+#switch:checked~.icon--sun {
+    transition-delay: 200ms;
+    transform: scale(1) rotate(360deg);
+}
+
+
+
+
+.container__depth {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    perspective: 1500px;
+}
+
+.gallery {
+    transform-style: preserve-3d;
+    height: 100%;
+}
+
+.frame {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition), display .75s ease;
+    will-change: transform;
+    transform-style: preserve-3d;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 100;
+    text-transform: uppercase;
+    width: min-content;
+    line-height: 1;
+}
+
+.frame h2 {
+    text-align: center;
+    font-size: calc(var(--index) * 3.3);
+}
+
+.frame-media {
+    position: relative;
+    width: calc(var(--index) * var(--side-small));
+    height: calc(var(--index) * var(--side-big));
+    background-position: center;
+    background-size: cover;
+}
+
+.frame-media_left {
+    right: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
+}
+
+.frame-media_right {
+    left: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
+}
+
+/* .frame_bg {
+    background-color: rgb(0 0 0 / .87);
+} */
+
+.frame__content {
+    background-color: #fff;
+    padding: 100px 0;
+}
+
+.dark-mode .frame__content {
+    background-color: #000;
+    padding: 100px 0;
+}
+
+video.frame-media {
+    width: calc(var(--index) * var(--side-big));
+    height: calc(var(--index) * var(--side-small));
+}
+
+video.frame-media_right {
+    left: calc(var(--side-big) / 2 * var(--index) + var(--gutter));
+}
+
+video.frame-media_left {
+    right: calc(var(--side-big) / 2 * var(--index) + var(--gutter));
+}
+
+.text-right>* {
+    position: relative;
+    left: 18vw;
+}
+
+.text-left>* {
+    position: relative;
+    right: 18vw;
+}
+
+.frame h3 {
+    width: 458px;
+    font-size: calc(var(--index) * 3);
+}
+
+.frame p {
+    max-width: 30vw;
+    margin-top: 3vh;
+}
+
+/* Introduce */
+.introduce-content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.light-mode .introduce-section {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.dark-mode .introduce-section {
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.introduce-title {
+    font-size: 84px;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(90deg, #6f43bf 0%, #c653ff 54.6%, #4843ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/* Downlaod */
+/* .download {
+    height: 100vh;
+} */
+
+.download-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.download-link {
+    margin-right: 8px;
+}
+
+.download-link a {
+    text-decoration: none;
+}
+
+.appstore-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 12px;
+    border: 3px solid rgb(189, 189, 189);
+    background-color: rgb(15, 15, 15);
+    border-radius: 15px;
+    gap: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0px 0px 100px -30px rgb(255, 255, 255);
+}
+
+.appstore-button svg {
+    width: 45px;
+}
+
+.appstore-button svg path {
+    fill: white;
+    transition: all 0.3s;
+}
+
+.button-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    transition: all 0.3s;
+}
+
+.top-text {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.bottom-text {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.appstore-button:hover {
+    background-color: rgb(236, 236, 236);
+    border: 3px solid rgb(138, 138, 138);
+}
+
+.appstore-button:hover .button-text {
+    color: black;
+}
+
+.appstore-button:hover svg path {
+    fill: black;
+}
+
+
+@media (max-width: 1000px) {
+    .text-right>* {
+        left: 0;
+    }
+
+    .frame p {
+        max-width: 56vw;
+        margin-top: 3vh;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .introduce-title {
+        font-size: 34px;
+    }
+
+    .introduce-section {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .frame__content {
+        padding: 145px 0;
+    }
+
+    .text-left>* {
+        right: 0;
+    }
+
+    .frame h3 {
+        font-size: calc(var(--index)* 5);
+    }
+
+    .frame p {
+        max-width: 100%;
+        font-size: 20px;
+    }
+
+    .frame__content img {
+        width: 80%;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .appstore-button svg {
+        width: 36px;
+    }
+
+    .top-text {
+        font-size: 12px;
+    }
+
+    .bottom-text {
+        font-size: 18px;
+    }
+
+    .appstore-button {
+        width: 180px;
+    }
+}
