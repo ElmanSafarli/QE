@@ -39,82 +39,12 @@ body::-webkit-scrollbar {
 }
 
 body {
-
+    color: #fff;
+    background-color: #000;
     font-size: calc(var(--index) * .8);
     line-height: 1.75;
     height: var(--depth);
 }
-
-
-/* Light mode */
-.light-mode {
-    --background-color: #ffffff;
-    --text-color: #000;
-}
-
-.light-mode body {
-    background-color: var(--background-color);
-    color: var(--text-color);
-}
-
-.dark-mode body {
-    color: #fff;
-    background-color: #000;
-}
-
-
-.change-theme {
-    position: fixed;
-    right: 12px;
-    bottom: 12px;
-    z-index: 99999;
-    border: none;
-    background: transparent;
-}
-
-.toggle {
-    background: linear-gradient(90deg, #6f43bf 0%, #c653ff 54.6%, #4843ff 100%);
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    display: grid;
-    place-items: center;
-    cursor: pointer;
-    box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.1);
-    line-height: 1;
-}
-
-.input {
-    display: none;
-}
-
-.icon {
-    grid-column: 1 / 1;
-    grid-row: 1 / 1;
-    transition: transform 500ms;
-}
-
-.icon--moon {
-    transition-delay: 200ms;
-    color: black;
-}
-
-.icon--sun {
-    transform: scale(0);
-    color: yellow;
-}
-
-#switch:checked+.icon--moon {
-    transform: rotate(360deg) scale(0);
-}
-
-#switch:checked~.icon--sun {
-    transition-delay: 200ms;
-    transform: scale(1) rotate(360deg);
-}
-
-
-
 
 .container__depth {
     width: 100%;
@@ -168,16 +98,7 @@ h1, h2, h3, h4 {
     left: calc(var(--side-small) / 2 * var(--index) + var(--gutter));
 }
 
-/* .frame_bg {
-    background-color: rgb(0 0 0 / .87);
-} */
-
 .frame__content {
-    background-color: #fff;
-    padding: 100px 0;
-}
-
-.dark-mode .frame__content {
     background-color: #000;
     padding: 100px 0;
 }
@@ -224,16 +145,6 @@ video.frame-media_left {
 }
 
 .introduce-section {
-    text-align: center;
-}
-
-. .light-mode .introduce-section {
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
-}
-
-.dark-mode .introduce-section {
     color: #fff;
     font-size: 20px;
     text-align: center;
@@ -251,10 +162,6 @@ video.frame-media_left {
 
 
 /* Downlaod */
-/* .download {
-    height: 100vh;
-} */
-
 .download-links {
     display: flex;
     align-items: center;

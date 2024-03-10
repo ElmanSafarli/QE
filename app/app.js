@@ -41,39 +41,3 @@ window.onscroll = function () {
 };
 
 window.scrollTo(0, 1)
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     const themeToggle = document.querySelector('#switch');
-//     const frame__content = document.querySelector('.frame__content');
-
-//     themeToggle.addEventListener('change', function () {
-//         document.body.classList.toggle('light-mode', themeToggle.checked);
-//         frame__content.classList.toggle('light-mode', themeToggle.checked);
-//     });
-// });
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const themeToggle = document.querySelector('#switch');
-
-    const setTheme = (lightMode) => {
-        document.documentElement.classList.toggle('dark-mode', lightMode);
-        themeToggle.checked = lightMode;
-    };
-
-    const saveThemePreference = (lightMode) => {
-        localStorage.setItem('light-mode', lightMode);
-    };
-
-    const loadThemePreference = () => {
-        return JSON.parse(localStorage.getItem('light-mode')) || false;
-    };
-
-    setTheme(loadThemePreference());
-
-    themeToggle.addEventListener('change', function () {
-        const isLightMode = themeToggle.checked;
-        setTheme(isLightMode);
-        saveThemePreference(isLightMode);
-    });
-});
