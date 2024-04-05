@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
     --gutter: 30px;
     --side-small: 26;
     --side-big: 36;
-    --depth: 6000px;
+    --depth: 6300px;
     --transition: .75s cubic-bezier(.075, .5, 0, 1)
 }
 
@@ -231,6 +231,10 @@ video.frame-media_left {
     fill: black;
 }
 
+
+.end img {
+    width: 370px;
+}
 
 @media (max-width: 1000px) {
     .text-right>* {
