@@ -4,6 +4,19 @@ let zSpacing = -1000,
     frames = Array.from($frames),
     zVals = [];
 
+// Select the backToTop button by its id
+const backToTopButton = document.getElementById('backToTop');
+
+// Add a click event listener to the button
+backToTopButton.addEventListener('click', function () {
+    // Scroll the window to the very top of the page
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // This adds smooth scrolling behavior
+    });
+});
+
+
 window.onscroll = function () {
     let top = document.documentElement.scrollTop,
         delta = lastPos - top;

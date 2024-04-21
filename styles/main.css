@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
     --gutter: 30px;
     --side-small: 26;
     --side-big: 36;
-    --depth: 6300px;
+    --depth: 5980px;
     --transition: .75s cubic-bezier(.075, .5, 0, 1)
 }
 
@@ -231,9 +231,40 @@ video.frame-media_left {
     fill: black;
 }
 
+.end p:nth-child(1) {
+    font-size: 16px;
+    text-align: center;
+    font-weight: 400;
+    /* color: linear-gradient(90deg, #6f43bf 0%, #c653ff 54.6%, #4843ff 100%); */
+    /* -webkit-text-fill-color: transparent; */
+}
+
+.end p:nth-child(2) {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 700;
+}
 
 .end img {
-    width: 570px;
+    width: 100%;
+}
+
+#backToTop {
+    cursor: pointer;
+    font-size: 16px;
+    background: linear-gradient(90deg, #6f43bf 0%, #c653ff 54.6%, #4843ff 100%);
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    /* top: 50%; */
+    left: 50%;
+    transform: translate(-50%, 30px);
 }
 
 @media (max-width: 1000px) {
@@ -296,5 +327,10 @@ video.frame-media_left {
 
     .appstore-button {
         width: 180px;
+    }
+
+    .end p:nth-child(2) {
+        font-size: 22px;
+        margin-top: 10px;
     }
 }
