@@ -370,6 +370,9 @@ video.frame-media_left {
 }
 
 @media (max-width: 500px) {
+    :root {
+        --depth: 5790px;
+    }
 
     .introduce-title {
         font-size: 34px;
