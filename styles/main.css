@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
     --gutter: 30px;
     --side-small: 26;
     --side-big: 36;
-    --depth: 5980px;
+    --depth: 6100px;
     --transition: .75s cubic-bezier(.075, .5, 0, 1)
 }
 
@@ -370,9 +370,9 @@ video.frame-media_left {
 }
 
 @media (max-width: 500px) {
-    :root {
+    /* :root {
         --depth: 5700px;
-    }
+    } */
 
     .introduce-title {
         font-size: 34px;
