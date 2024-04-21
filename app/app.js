@@ -16,6 +16,14 @@ backToTopButton.addEventListener('click', function () {
     });
 });
 
+backToTopButton.addEventListener('touchend', function () {
+    // Scroll the window to the very top of the page
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth' // This adds smooth scrolling behavior
+    });
+});
+
 
 window.onscroll = function () {
     let top = document.documentElement.scrollTop,

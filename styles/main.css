@@ -23,7 +23,7 @@ body::-webkit-scrollbar {
     --gutter: 30px;
     --side-small: 26;
     --side-big: 36;
-    --depth: 6100px;
+    --depth: 6400px;
     --transition: .75s cubic-bezier(.075, .5, 0, 1)
 }
 
@@ -245,9 +245,7 @@ video.frame-media_left {
     font-weight: 700;
 }
 
-.end img {
-    width: 100%;
-}
+.end {}
 
 #backToTop {
     cursor: pointer;
